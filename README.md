@@ -21,7 +21,7 @@ Inter  Quartile Range is computed so as to recognize an outlier(Any observations
 The given function works under an underlying assumption that any dataset will contain timestamp,date in 1st column and Timeseries recorded in the 2nd column.Based on this assumption the Outliers are appended in a list while iteration.
 The Date column is then converted to index column,since while decomposing a time series into deterministic components only integral parameter is accepted.
 As every real time series data has some trend and periodicity,the individual components are extracted.And an estimated model is plotted with original to visualise the contrast.
-The difference of the two models is residuals,when the residual has an extremely large value it might qualify as an anomaly
-The confidence interval is computed for 99% of confidence interval(mu-3SD,mu+3SD).this method works better than outlier detection for time series.Any point lying outside
+The difference of the two models is residuals,when the residual has an extremely large value as compared to the others it might qualify as an anomaly
+The 99% confidence interval is computed (mu-3SD,mu+3SD).this method works better than outlier detection for time series.Any point lying outside
  is an anomaly which is stored further in a list
 In case any data which contains null values,or exhibit any of the foregoing behaviour is considered anamolous.(The path and data can be changed accordingly)
